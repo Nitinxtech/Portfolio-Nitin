@@ -23,12 +23,12 @@ import {
 
 export const personalData = {
   name: 'Nitin Pandey',
-  title: 'Software Engineer',
+  title: 'Full-stack Developer',
   summary:
-    'A passionate and results-driven Software Engineer with expertise in building modern, responsive, and scalable web applications. Proficient in the full development lifecycle, from concept to deployment. Always eager to learn new technologies and solve complex problems.',
+    'I am Nitin Pandey, a motivated and enthusiastic final year BTech CSE student with a strong foundation in fullstack web development and a passion for coding and problem-solving. I am proficient in Object-Oriented Programming (OOPS) and have experience building projects using frontend and backend technologies. Additionally, I am skilled in Data Structures and Algorithms (DSA) with Java and continuously work to enhance my problem-solving abilities.',
   contact: {
-    email: 'pandey30nitin@email.com',
-    resume: '/nitin-pandey-resume.pdf',
+    email: 'nitinpandey.dev@gmail.com',
+    resume: 'https://drive.google.com/file/d/1ZKapZ_YilSGdQqKI1rxRjHAJq_YaTR-0/view?usp=sharing',
   },
   socials: [
     {
@@ -38,7 +38,7 @@ export const personalData = {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/nitin-pandey-30',
+      url: 'https://linkedin.com/in/nitinpandey306',
       icon: Linkedin,
     },
     {
@@ -52,7 +52,7 @@ export const personalData = {
 export const aboutData = {
   title: 'About Me',
   description:
-    "I'm a software engineer with a deep-seated passion for creating elegant, efficient, and user-friendly digital experiences. I thrive on turning complex problems into simple, beautiful, and intuitive solutions. When I'm not coding, you can find me exploring new hiking trails, diving into a good book, or contributing to open-source projects.",
+    "I am Nitin Pandey, a motivated and enthusiastic final year BTech CSE student with a strong foundation in fullstack web development and a passion for coding and problem-solving. I am proficient in Object-Oriented Programming (OOPS) and have experience building projects using frontend and backend technologies. Additionally, I am skilled in Data Structures and Algorithms (DSA) with Java and continuously work to enhance my problem-solving abilities.",
 };
 
 export const skillsData = {

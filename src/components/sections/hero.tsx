@@ -13,7 +13,7 @@ export default function Hero() {
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/50 to-primary p-1 shadow-lg">
             <div className="h-full w-full rounded-full bg-background p-2">
               <Image
-                src="https://picsum.photos/seed/dev-image/400/400"
+                src="/nitin-pandey-profile.jpg"
                 alt="Nitin Pandey"
                 width={400}
                 height={400}
