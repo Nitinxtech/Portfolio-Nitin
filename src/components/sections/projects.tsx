@@ -5,7 +5,7 @@ import Section from '@/components/shared/section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Projects() {
@@ -56,12 +56,6 @@ export default function Projects() {
                   <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github />
                     GitHub
-                  </Link>
-                </Button>
-                <Button variant="default" asChild>
-                  <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink />
-                    Live Demo
                   </Link>
                 </Button>
               </CardFooter>
