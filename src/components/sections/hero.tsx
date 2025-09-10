@@ -6,6 +6,7 @@ import { SocialIcons } from '@/components/shared/social-icons';
 import { Button } from '@/components/ui/button';
 
 export default function Hero() {
+  const githubUsername = personalData.socials.find(s => s.name === 'GitHub')?.url.split('/').filter(Boolean).pop() || '';
   return (
     <Section id="hero" className="py-24 md:py-32 lg:py-40">
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3">
@@ -13,7 +14,7 @@ export default function Hero() {
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/50 to-primary p-1 shadow-lg">
             <div className="h-full w-full rounded-full bg-background p-2">
               <Image
-                src="/nitin-pandey-profile.jpg"
+                src={`https://github.com/${githubUsername}.png`}
                 alt="Nitin Pandey"
                 width={400}
                 height={400}
