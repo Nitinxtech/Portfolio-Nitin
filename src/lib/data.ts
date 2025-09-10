@@ -1,5 +1,26 @@
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 import { LeetcodeIcon } from '@/components/shared/icons';
+import {
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiRedux,
+  SiTailwindcss,
+  SiHtml5,
+  SiCss3,
+  SiNodedotjs,
+  SiExpress,
+  SiPython,
+  SiMongodb,
+  SiPostgresql,
+  SiFirebase,
+  SiVercel,
+  SiDocker,
+  SiGit,
+  SiJest,
+  SiWebpack,
+} from 'react-icons/si';
 
 export const personalData = {
   name: 'Nitin Pandey',
@@ -32,7 +53,7 @@ export const personalData = {
 export const aboutData = {
   title: 'About Me',
   description:
-    "Hello! I'm Nitin, a software engineer with a deep-seated passion for creating elegant, efficient, and user-friendly digital experiences. My journey in technology started with a fascination for how things work, which quickly blossomed into a career in web development. I thrive on turning complex problems into simple, beautiful, and intuitive solutions. I'm proficient in both front-end and back-end development, allowing me to build comprehensive and robust applications from the ground up. When I'm not coding, you can find me exploring new hiking trails, diving into a good book, or contributing to open-source projects.",
+    "I'm a software engineer with a deep-seated passion for creating elegant, efficient, and user-friendly digital experiences. I thrive on turning complex problems into simple, beautiful, and intuitive solutions. When I'm not coding, you can find me exploring new hiking trails, diving into a good book, or contributing to open-source projects.",
 };
 
 export const skillsData = {
@@ -40,19 +61,45 @@ export const skillsData = {
   categories: [
     {
       name: 'Frontend',
-      skills: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Redux', 'Tailwind CSS', 'HTML5', 'CSS3'],
+      skills: [
+        { name: 'TypeScript', icon: SiTypescript },
+        { name: 'JavaScript', icon: SiJavascript },
+        { name: 'React', icon: SiReact },
+        { name: 'Next.js', icon: SiNextdotjs },
+        { name: 'Redux', icon: SiRedux },
+        { name: 'Tailwind CSS', icon: SiTailwindcss },
+        { name: 'HTML5', icon: SiHtml5 },
+        { name: 'CSS3', icon: SiCss3 },
+      ],
     },
     {
       name: 'Backend',
-      skills: ['Node.js', 'Express.js', 'Python', 'REST APIs'],
+      skills: [
+        { name: 'Node.js', icon: SiNodedotjs },
+        { name: 'Express.js', icon: SiExpress },
+        { name: 'Python', icon: SiPython },
+        { name: 'REST APIs', icon: null },
+      ],
     },
     {
       name: 'Databases & Cloud',
-      skills: ['MongoDB', 'PostgreSQL', 'Firebase', 'Vercel', 'Docker'],
+      skills: [
+        { name: 'MongoDB', icon: SiMongodb },
+        { name: 'PostgreSQL', icon: SiPostgresql },
+        { name: 'Firebase', icon: SiFirebase },
+        { name: 'Vercel', icon: SiVercel },
+        { name: 'Docker', icon: SiDocker },
+      ],
     },
     {
       name: 'Tools & Principles',
-      skills: ['Git', 'Agile Methodologies', 'CI/CD', 'Jest', 'Webpack'],
+      skills: [
+        { name: 'Git', icon: SiGit },
+        { name: 'Agile Methodologies', icon: null },
+        { name: 'CI/CD', icon: null },
+        { name: 'Jest', icon: SiJest },
+        { name: 'Webpack', icon: SiWebpack },
+      ],
     },
   ],
 };

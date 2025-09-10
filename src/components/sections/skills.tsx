@@ -2,6 +2,7 @@ import { skillsData } from '@/lib/data';
 import Section from '@/components/shared/section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import type { IconType } from 'react-icons';
 
 export default function Skills() {
   return (
@@ -19,11 +20,15 @@ export default function Skills() {
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <Badge key={skill} variant="default" className="font-code text-base">
-                    {skill}
-                  </Badge>
-                ))}
+                {category.skills.map((skill) => {
+                  const Icon = skill.icon as IconType | undefined;
+                  return (
+                    <Badge key={skill.name} variant="default" className="flex items-center gap-2 font-code text-base">
+                      {Icon && <Icon className="h-4 w-4" />}
+                      <span>{skill.name}</span>
+                    </Badge>
+                  );
+                })}
               </div>
             </CardContent>
           </Card>

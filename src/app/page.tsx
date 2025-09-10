@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 import Header from '@/components/header';
 import Hero from '@/components/sections/hero';
-import About from '@/components/sections/about';
 import Skills from '@/components/sections/skills';
 import Projects from '@/components/sections/projects';
 import Activity from '@/components/sections/activity';
@@ -15,9 +14,6 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
         <Suspense
           fallback={
             <div className="container mx-auto px-4 py-16 md:py-24">
@@ -27,6 +23,8 @@ export default function Home() {
         >
           <Activity />
         </Suspense>
+        <Skills />
+        <Projects />
         <Contact />
       </main>
       <Footer />
