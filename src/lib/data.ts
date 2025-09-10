@@ -18,7 +18,6 @@ import {
   SiVercel,
   SiDocker,
   SiGit,
-  SiJest,
   SiWebpack,
 } from 'react-icons/si';
 
@@ -97,7 +96,6 @@ export const skillsData = {
         { name: 'Git', icon: SiGit, color: '#F05032' },
         { name: 'Agile Methodologies', icon: null, color: null },
         { name: 'CI/CD', icon: null, color: null },
-        { name: 'Jest', icon: SiJest, color: '#C21325' },
         { name: 'Webpack', icon: SiWebpack, color: '#8DD6F9' },
       ],
     },
