@@ -13,7 +13,7 @@ export const personalData = {
   socials: [
     {
       name: 'GitHub',
-      url: 'https://github.com/nitin-pandey-30',
+      url: 'https://github.com/Nitinxtech',
       icon: Github,
     },
     {
