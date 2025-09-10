@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "1",
+      "description": "E-commerce Platform",
+      "imageUrl": "https://picsum.photos/seed/1/600/400",
+      "imageHint": "online store"
+    },
+    {
+      "id": "2",
+      "description": "Task Management App",
+      "imageUrl": "https://picsum.photos/seed/2/600/400",
+      "imageHint": "kanban board"
+    },
+    {
+      "id": "3",
+      "description": "Personal Portfolio",
+      "imageUrl": "https://picsum.photos/seed/3/600/400",
+      "imageHint": "web design"
+    }
+  ]
 }
