@@ -26,7 +26,7 @@ export default async function Activity() {
           My contributions on GitHub and LeetCode over the last year.
         </p>
       </div>
-      <div className="mt-12 grid grid-cols-1 gap-8">
+      <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
         <Card className="bg-card">
           <CardHeader>
             <CardTitle className="font-headline text-2xl">GitHub Contributions</CardTitle>
