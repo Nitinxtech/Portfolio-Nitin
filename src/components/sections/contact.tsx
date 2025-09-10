@@ -1,5 +1,6 @@
 import { contactData } from '@/lib/data';
 import Section from '@/components/shared/section';
+import { ContactForm } from '@/components/contact-form';
 
 export default function Contact() {
   return (
@@ -12,6 +13,7 @@ export default function Contact() {
           {contactData.description}
         </p>
       </div>
+      <ContactForm />
     </Section>
   );
 }

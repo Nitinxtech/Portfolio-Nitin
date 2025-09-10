@@ -1,10 +1,23 @@
+import Marquee from 'react-fast-marquee';
 import { skillsData } from '@/lib/data';
 import Section from '@/components/shared/section';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import type { IconType } from 'react-icons';
 
 export default function Skills() {
+  const allSkills = skillsData.categories.flatMap(category => category.skills);
+  const firstRow = allSkills.slice(0, Math.ceil(allSkills.length / 2));
+  const secondRow = allSkills.slice(Math.ceil(allSkills.length / 2));
+
+  const SkillItem = ({ skill }: { skill: (typeof allSkills)[0] }) => {
+    const Icon = skill.icon as IconType | undefined;
+    return (
+      <div className="mx-4 flex flex-col items-center justify-center gap-2 text-center">
+        {Icon && <Icon className="h-16 w-16" style={{ color: skill.color }} />}
+        <span className="font-code text-sm font-semibold">{skill.name}</span>
+      </div>
+    );
+  };
+
   return (
     <Section id="skills">
       <div className="text-center">
@@ -12,27 +25,17 @@ export default function Skills() {
           {skillsData.title}
         </h2>
       </div>
-      <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {skillsData.categories.map((category) => (
-          <Card key={category.name} className="bg-secondary/50">
-            <CardHeader>
-              <CardTitle className="font-headline text-2xl">{category.name}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => {
-                  const Icon = skill.icon as IconType | undefined;
-                  return (
-                    <Badge key={skill.name} variant="default" className="flex items-center gap-2 font-code text-base">
-                      {Icon && <Icon className="h-4 w-4" />}
-                      <span>{skill.name}</span>
-                    </Badge>
-                  );
-                })}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+      <div className="mt-12 space-y-8">
+        <Marquee gradient={false} speed={50} pauseOnHover>
+          {firstRow.map(skill => (
+            <SkillItem key={skill.name} skill={skill} />
+          ))}
+        </Marquee>
+        <Marquee gradient={false} speed={50} pauseOnHover direction="right">
+          {secondRow.map(skill => (
+            <SkillItem key={skill.name} skill={skill} />
+          ))}
+        </Marquee>
       </div>
     </Section>
   );
