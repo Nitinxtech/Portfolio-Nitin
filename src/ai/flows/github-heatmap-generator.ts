@@ -44,16 +44,25 @@ const getGithubHeatmap = ai.defineTool(
   },
   async ({githubUsername}) => {
     try {
-      const response = await fetch(`https://ghchart.rshah.org/2196f3/${githubUsername}`);
+      // The API uses a color name for the theme. `a1c93a` is a greenish color. Let's use a purplish color to match the new theme.
+      const response = await fetch(`https://ghchart.rshah.org/8e44ad/${githubUsername}`);
       if (!response.ok) {
         console.error(`Failed to fetch GitHub heatmap for user: ${githubUsername}. Status: ${response.status}`);
-        return `<svg width="828" height="128"><text x="10" y="20">Could not load GitHub chart.</text></svg>`;
+        return `<svg width="828" height="128"><text x="10" y="20" fill="hsl(var(--foreground))">Could not load GitHub chart.</text></svg>`;
       }
       const svgText = await response.text();
-      return svgText;
+       const style = `<style>
+        svg {
+          background-color: transparent !important;
+        }
+        text {
+          fill: hsl(var(--foreground)) !important;
+        }
+      </style>`;
+      return svgText.replace('</svg>', `${style}</svg>`);
     } catch (error) {
       console.error(`Error fetching GitHub heatmap for user: ${githubUsername}`, error);
-      return `<svg width="828" height="128"><text x="10" y="20">Could not load GitHub chart.</text></svg>`;
+      return `<svg width="828" height="128"><text x="10" y="20" fill="hsl(var(--foreground))">Could not load GitHub chart.</text></svg>`;
     }
   }
 );

@@ -44,14 +44,15 @@ const getLeetcodeHeatmap = ai.defineTool(
   },
   async ({leetcodeUsername}) => {
     try {
+      // ?yearly=true shows the full year
       const response = await fetch(
-        `https://leetcard.jacoblin.cool/${leetcodeUsername}?theme=dark&ext=heatmap`
+        `https://leetcard.jacoblin.cool/${leetcodeUsername}?theme=dark&ext=heatmap&yearly=true`
       );
       if (!response.ok) {
         console.error(
           `Failed to fetch LeetCode heatmap for user: ${leetcodeUsername}. Status: ${response.status}`
         );
-        return `<svg width="828" height="128"><text x="10" y="20">Could not load LeetCode chart.</text></svg>`;
+        return `<svg width="828" height="128"><text x="10" y="20" fill="hsl(var(--foreground))">Could not load LeetCode chart.</text></svg>`;
       }
       const svgText = await response.text();
       // Inject styles to make it look better in dark mode
@@ -65,6 +66,9 @@ const getLeetcodeHeatmap = ai.defineTool(
         .wday, .month {
           fill: hsl(var(--muted-foreground)) !important;
         }
+        rect[fill="#111111"], rect[fill="#222222"] {
+          fill: hsl(var(--muted) / 0.5) !important;
+        }
       </style>`;
       return svgText.replace('</svg>', `${style}</svg>`);
     } catch (error) {
@@ -72,7 +76,7 @@ const getLeetcodeHeatmap = ai.defineTool(
         `Error fetching LeetCode heatmap for user: ${leetcodeUsername}`,
         error
       );
-      return `<svg width="828" height="128"><text x="10" y="20">Could not load LeetCode chart.</text></svg>`;
+      return `<svg width="828" height="128"><text x="10" y="20" fill="hsl(var(--foreground))">Could not load LeetCode chart.</text></svg>`;
     }
   }
 );
