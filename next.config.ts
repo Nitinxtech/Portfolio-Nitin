@@ -29,7 +29,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'httpshttps',
         hostname: 'github.com',
         port: '',
         pathname: '/**',
@@ -37,10 +37,10 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    allowedDevOrigins: [
-      'https://6000-firebase-studio-1757505079716.cluster-edb2jv34dnhjisxuq5m7l37ccy.cloudworkstations.dev',
-    ],
   },
+  allowedDevOrigins: [
+      'https://6000-firebase-studio-1757505079716.cluster-edb2jv34dnhjisxuq5m7l37ccy.cloudworkstations.dev',
+  ],
 };
 
 export default nextConfig;
