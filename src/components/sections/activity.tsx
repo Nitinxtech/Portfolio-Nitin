@@ -10,13 +10,13 @@ export default async function Activity() {
   return (
     <Section id="activity">
       <div className="text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl">
           LeetCode Activity
         </h2>
       </div>
-      <Card className="mt-12">
+      <Card className="mt-12 bg-secondary/50">
         <CardHeader>
-          <CardTitle className="font-headline text-xl">Contribution Graph</CardTitle>
+          <CardTitle className="font-headline text-2xl">Contribution Graph</CardTitle>
         </CardHeader>
         <CardContent>
           <div

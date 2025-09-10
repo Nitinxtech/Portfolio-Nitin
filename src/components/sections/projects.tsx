@@ -15,9 +15,9 @@ export default function Projects() {
   }, {} as Record<string, typeof PlaceHolderImages[0]>);
 
   return (
-    <Section id="projects" className="bg-muted/50">
+    <Section id="projects" className="bg-secondary">
       <div className="text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="font-headline text-4xl font-extrabold tracking-tight sm:text-5xl">
           {projectsData.title}
         </h2>
       </div>
@@ -25,7 +25,7 @@ export default function Projects() {
         {projectsData.projects.map((project) => {
           const placeholder = projectImages[project.imagePlaceholderId];
           return (
-            <Card key={project.id} className="flex flex-col">
+            <Card key={project.id} className="flex flex-col overflow-hidden transition-all hover:scale-105 hover:shadow-xl">
               <CardHeader>
                 {placeholder && (
                   <div className="aspect-video overflow-hidden rounded-lg border">
@@ -34,31 +34,31 @@ export default function Projects() {
                       alt={project.title}
                       width={600}
                       height={400}
-                      className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                      className="h-full w-full object-cover"
                       data-ai-hint={placeholder.imageHint}
                     />
                   </div>
                 )}
-                <CardTitle className="mt-4 font-headline text-xl">{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="flex-grow space-y-4">
+                <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="font-code">
+                    <Badge key={tech} variant="outline" className="font-code">
                       {tech}
                     </Badge>
                   ))}
                 </div>
               </CardContent>
               <CardFooter className="flex gap-2">
-                <Button variant="outline" size="sm" asChild>
+                <Button variant="outline" asChild>
                   <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github />
                     GitHub
                   </Link>
                 </Button>
-                <Button variant="default" size="sm" asChild>
+                <Button variant="default" asChild>
                   <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink />
                     Live Demo
