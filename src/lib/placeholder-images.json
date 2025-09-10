@@ -2,21 +2,21 @@
   "placeholderImages": [
     {
       "id": "1",
-      "description": "E-commerce Platform",
-      "imageUrl": "https://picsum.photos/seed/1/600/400",
-      "imageHint": "online store"
+      "description": "Collaborative Code Editor",
+      "imageUrl": "https://picsum.photos/seed/code/600/400",
+      "imageHint": "code editor"
     },
     {
       "id": "2",
-      "description": "Task Management App",
-      "imageUrl": "https://picsum.photos/seed/2/600/400",
-      "imageHint": "kanban board"
+      "description": "Hotel Booking Website",
+      "imageUrl": "https://picsum.photos/seed/hotel/600/400",
+      "imageHint": "hotel booking"
     },
     {
       "id": "3",
-      "description": "Personal Portfolio",
-      "imageUrl": "https://picsum.photos/seed/3/600/400",
-      "imageHint": "web design"
+      "description": "AI Chatbot",
+      "imageUrl": "https://picsum.photos/seed/chatbot/600/400",
+      "imageHint": "chatbot interface"
     }
   ]
 }
