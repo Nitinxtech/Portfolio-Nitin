@@ -27,7 +27,7 @@ export default async function Activity() {
         </p>
       </div>
       <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
-        <Card className="bg-card">
+        <Card>
           <CardHeader>
             <CardTitle className="font-headline text-2xl">GitHub Contributions</CardTitle>
           </CardHeader>
@@ -38,7 +38,7 @@ export default async function Activity() {
             />
           </CardContent>
         </Card>
-        <Card className="bg-card">
+        <Card>
           <CardHeader>
             <CardTitle className="font-headline text-2xl">LeetCode Activity</CardTitle>
           </CardHeader>
